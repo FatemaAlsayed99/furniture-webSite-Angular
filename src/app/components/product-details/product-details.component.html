@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row mb-4" >
+      <div class="col-md-6">
+        <img [src]="product?.Img" class="img-fluid"  ImgStyle>
+        <h3>
+          <ng-container [ngSwitch]="product?.Quantity">
+  
+            <ng-container *ngSwitchCase="0"><h3 class="text-danger">Out Of Stock</h3></ng-container>
+            <ng-container *ngSwitchCase="1">Last One item</ng-container>
+            <ng-container *ngSwitchCase="2">Last 2 item!</ng-container>
+            <ng-container *ngSwitchCase="3">Last 3 item</ng-container>
+            <ng-container *ngSwitchDefault>In Stock</ng-container>
+          </ng-container>
+        </h3>
+        
+      </div>
+      <div class="col-md-6">
+  
+        <h2>Product Details</h2>
+        <h3>{{product?.Name}}</h3>
+        <h3 style="color:rgb(160, 89, 89);">{{product?.details}}</h3>
+        <h5>Price {{product?.Price|currency}}</h5>
+        <h5>Material: {{product?.Material}}</h5>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center" role="group" aria-label="Basic example">
+      <button class="border-0" (click)="previous()" [disabled]="prdID==productsIDSList[0]"><i class="fa-solid fa-angles-left fs-4 text-primary"></i></button>
+      <button class="border-0" (click)="next()" [disabled]="prdID==productsIDSList[productsIDSList.length-1]"><i class="fa-solid fa-angles-right fs-4"></i></button>
+   </div>
+  
+  </div>
+  
+  <button class="button-91 btn bg-secondary" [routerLink]="['/Products']">Back</button>
+  
+  
+  

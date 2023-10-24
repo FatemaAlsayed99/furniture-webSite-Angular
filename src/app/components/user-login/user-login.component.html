@@ -1,0 +1,9 @@
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" name="email" [(ngModel)]="userLoginData.email" #emailInput="ngModel">
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" class="form-control" id="password" name="password" [(ngModel)]="userLoginData.password" #passwordInput="ngModel">
+    </div>
+    <button type="submit" class="btn btn-success" (click)="userLogin(userLoginData)" >Log In</button>

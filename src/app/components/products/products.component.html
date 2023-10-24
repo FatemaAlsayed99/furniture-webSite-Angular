@@ -1,0 +1,83 @@
+  
+  <!-- <aside class="aside">
+    <h2>Aside</h2>
+    <p>This is the aside content.</p>
+  </aside> -->
+    <div>
+      <button class="btn btn-warning" (click)="buy()">Buy</button>
+    </div>
+
+    <div *ngIf="showThanks">
+      <h1>Thanks for purchasing from our Store, {{ clientName }}!</h1>
+    </div>
+
+    <div class="logo" *ngIf="showLogo">
+      <img src="{{store1.logo}}">
+    </div>
+    
+   
+
+    <!-- <div class="row">
+      <div class="col-md-2"><h5>Select by Category:</h5></div>
+      <div class="col-md-10">
+        <select [(ngModel)]="selectedCategory" class="form-control">
+          <option *ngFor="let category of categoryList" [ngValue]="category">
+            {{category.Name}}
+          </option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-sm-4 mb-2 p-3" *ngFor="let item of productList" [class.bg-warning]="item.Quantity==1" [hidden]="selectedCategory && item.CategoryID !== selectedCategory.ID">
+        <img [src]="item.Img" class="img-fluid">
+        <h4>{{item.Name}}</h4>
+        <h5>Price: {{item.Price}}</h5>
+        <p>Available Quantity: {{item.Quantity}}</p>
+        <button class="btn btn-danger m-2" [disabled]="item.Quantity==0" (click)="buyProduct(item)"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+      </div>
+    </div> -->
+    <!-- <div class="row">
+      <div class="col-md-2"><h5>Select by Category:</h5></div>
+      <div class="col-md-10">
+        <select [(ngModel)]="listFilter"  class="form-control">
+          <option *ngFor="let category of categoryList" [ngValue]="category">
+            {{category.Name}}
+          </option>
+        </select>
+      </div>
+    </div> -->
+    
+    <div class="row">
+      <!-- <div class="col-sm-4 mb-2 p-3" *ngFor="let item of  filteredProducts" [class.bg-warning]="item.Quantity==1"> -->
+        <ng-container *ngFor="let item of  filteredProducts">
+        <div class="col-sm-4 mb-2 p-3"   [ngClass]="{'bg-warning':item.Quantity==1}">
+        <img [src]="item.Img" class="img-fluid" (click)="prdDetails(item.id)" ImgStyle="scale(1)" radius1='scale(.8)'>
+        <h4>{{item.Name| uppercase}}</h4>
+        <p>Added at: {{ date1 | date: 'short' }}</p>
+
+        <h5>Price: {{item.Price | currency: 'USD' }}</h5>
+        <p>Available Quantity: {{item.Quantity}}</p>
+        <ng-container [ngSwitch]="item.Quantity">
+          <ng-template [ngSwitchCase]="1"><p>Last one item</p></ng-template>
+          <ng-template ngSwitchCase="2"><p>Last two items</p></ng-template>
+          <ng-template ngSwitchCase="0"><p>Out of stock</p></ng-template>
+          <ng-template ngSwitchDefault>   <p>In stock</p></ng-template>
+        </ng-container>
+       
+        <label>Num of Products:</label>
+        <input [(ngModel)]="numProducts[item.Name]" class="form-control" #quantityInput>
+        <button class="btn btn-danger" [disabled]="item.Quantity == 0 || !quantityInput.value" (click)="buyProduct(item)">
+          <!-- <button class="btn btn-danger" [disabled]="item.Quantity == 0" (click)="buyProduct(item)">   --><i class="fa-solid fa-cart-shopping"></i>Add to cart
+    </button><br>
+    <button class="btn btn-success" (click)="updatedProduct(item.id,item)">Edite</button>
+    <button class="btn btn-primary" (click)="deletedProduct(item)">Delete</button>
+      </div>
+    </ng-container>
+   
+
+    </div>
+    <h3>Creditcard number: {{ cardNumber }}</h3>
+
+    <h3>&nbsp;&nbsp;{{ cardNumber | creditCardFormatter }}</h3>
+

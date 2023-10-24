@@ -1,0 +1,121 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "Name": "table1",
+      "Quantity": 4,
+      "Price": 1250,
+      "Img": "assets/table.jpg",
+      "CategoryID": 1,
+      "Material": "wood",
+      "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi omnis quasi assumenda nisi, consectetur quo nihil provident rem libero laborum dolore explicabo nobis ipsam non adipisci blanditiis mollitia reiciendis? Ad! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi omnis quasi assumenda nisi, consectetur quo nihil provident rem libero laborum dolore explicabo nobis ipsam non adipisci blanditiis mollitia reiciendis? Ad!"
+    },
+    {
+      "id": 2,
+      "Name": "table2",
+      "Quantity": 1,
+      "Price": 950,
+      "Img": "assets/table.jpg",
+      "CategoryID": 1,
+      "Material": "wood",
+      "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi omnis quasi assumenda nisi, consectetur quo nihil provident rem libero laborum dolore explicabo nobis ipsam non adipisci blanditiis mollitia reiciendis? Ad! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi omnis quasi assumenda nisi, consectetur quo nihil provident rem libero laborum dolore explicabo nobis ipsam non adipisci blanditiis mollitia reiciendis? Ad!"
+    },
+    {
+      "id": 3,
+      "Name": "table3",
+      "Quantity": 0,
+      "Price": 1000,
+      "Img": "assets/table.jpg",
+      "CategoryID": 1,
+      "Material": "wood",
+      "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi omnis quasi assumenda nisi, consectetur quo nihil provident rem libero laborum dolore explicabo nobis ipsam non adipisci blanditiis mollitia reiciendis? Ad! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi omnis quasi assumenda nisi, consectetur quo nihil provident rem libero laborum dolore explicabo nobis ipsam non adipisci blanditiis mollitia reiciendis? Ad!"
+    },
+    {
+      "id": 4,
+      "Name": "tv1",
+      "Quantity": 1,
+      "Price": 1200,
+      "Img": "assets/tv.jpg",
+      "CategoryID": 2,
+      "Material": "wood",
+      "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi omnis quasi assumenda nisi, consectetur quo nihil provident rem libero laborum dolore explicabo nobis ipsam non adipisci blanditiis mollitia reiciendis? Ad! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi omnis quasi assumenda nisi, consectetur quo nihil provident rem libero laborum dolore explicabo nobis ipsam non adipisci blanditiis mollitia reiciendis? Ad!"
+    },
+    {
+      "id": 5,
+      "Name": "tv2",
+      "Quantity": 0,
+      "Price": 950,
+      "Img": "assets/tv.jpg",
+      "CategoryID": 2,
+      "Material": "wood",
+      "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi omnis quasi assumenda nisi, consectetur quo nihil provident rem libero laborum dolore explicabo nobis ipsam non adipisci blanditiis mollitia reiciendis? Ad! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi omnis quasi assumenda nisi, consectetur quo nihil provident rem libero laborum dolore explicabo nobis ipsam non adipisci blanditiis mollitia reiciendis? Ad!"
+    },
+    {
+      "id": 6,
+      "Name": "tv3",
+      "Quantity": 5,
+      "Price": 1000,
+      "Img": "assets/tv.jpg",
+      "CategoryID": 2,
+      "Material": "wood",
+      "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi omnis quasi assumenda nisi, consectetur quo nihil provident rem libero laborum dolore explicabo nobis ipsam non adipisci blanditiis mollitia reiciendis? Ad! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi omnis quasi assumenda nisi, consectetur quo nihil provident rem libero laborum dolore explicabo nobis ipsam non adipisci blanditiis mollitia reiciendis? Ad!"
+    }
+  ],
+  "categories": [
+    {
+      "ID": 1,
+      "Name": "table"
+    },
+    {
+      "ID": 2,
+      "Name": "tv unit"
+    }
+  ],
+  "users": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "fullName": "FatemaAlsayed",
+      "email": "tame_omar@hotmail.com",
+      "id": 3
+    },
+    {
+      "fullName": "FatemaAlsayed",
+      "email": "jhkmn@kuh",
+      "id": 4
+    },
+    {
+      "fullName": "FatemaAlsayed",
+      "email": "tame_omar@hotmail.com",
+      "id": 5
+    },
+    {
+      "fullName": "FatemaAlsayed",
+      "email": "tame_omar@hotmail.com",
+      "password": "4667",
+      "id": 6
+    },
+    {
+      "fullName": "FatemaAlsayed",
+      "email": "Bata@Bata.Bata",
+      "password": "1549679979",
+      "id": 7
+    },
+    {
+      "fullName": "aliahmed",
+      "email": "towas40294@avidapro.com",
+      "password": "1234567890",
+      "id": 8
+    },
+    {
+      "fullName": "fatema-ali",
+      "email": "bearysobhy@gmail.com",
+      "password": "1234567899",
+      "id": 9
+    }
+  ]
+}

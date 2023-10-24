@@ -1,0 +1,72 @@
+<div class="card mb-3">
+  <div class="card-header">
+    Sign Up with template
+  </div>
+  <div class="card-body">
+    <form (ngSubmit)="addNewProduct()" #productform="ngForm">
+      <div class="form-group row mb-2">
+        <label for="firstName" class="col-md-2 col-form-label">Name</label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Product Name (required)" required
+            minlength="3" [(ngModel)]="newProduct.Name" #NameInput="ngModel" >
+            <!-- [ngClass]="{'is-invalid':(NameInput.touched||NameInput.dirty) && NameInput.invalid}" -->
+            <!-- <span class="invalid-feedback">
+
+              <span *ngIf="NameInput.errors?.['required']">Please enter the product name</span>
+              <span *ngIf="NameInput.errors?.['minlength']">product name must be at least 3 characters</span>
+            </span> -->
+        </div>
+      </div>
+        <div class="form-group row mb-2">
+          <label for="firstName" class="col-md-2 col-form-label">Material</label>
+          <div class="col-md-8">
+            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Material (required)" required
+              minlength="3" [(ngModel)]="newProduct.Material" #MaterialInput="ngModel" >
+      </div>
+        </div>
+     
+      <div class="form-group row mb-2">
+        <label for="firstName" class="col-md-2 col-form-label">Quantity</label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Quantity (required)" required
+            minlength="3" [(ngModel)]="newProduct.Quantity" #quantityInput="ngModel" >
+    </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label"
+               for="lastNameId">Price</label>
+        <div class="col-md-8">
+          <input class="form-control"
+                 id="price"
+                 type="text"
+                 placeholder="Price (required)"
+                 required
+                 name="price"
+                 [(ngModel)]="newProduct.Price"
+                 #priceInput="ngModel"
+                 
+                />
+                <!-- [ngClass]="{'is-invalid':(priceInput.touched||priceInput.dirty) && priceInput.invalid}" -->
+                <!-- <span class="invalid-feedback">
+                  <span *ngIf="priceInput.errors?.['required']">Price is required</span>
+                  <span *ngIf="priceInput.errors?.['pattern']">Price must be numbers only</span>
+                </span> -->
+
+        </div>
+      </div>
+
+      <!-- <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label"
+               for="emailId">Category</label>
+               <select id="category" name="category" [(ngModel)]="product.CategoryID" required>
+                 <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+               </select>
+      </div> -->
+
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>
+</div>
+      <!-- static content
+      <button  class="btn btn-primary">Add New Product</button> -->
